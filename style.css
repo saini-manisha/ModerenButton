@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    padding: 0.8rem 2.3rem;
+    color: white;
+    background-color: #e84949;
+    box-shadow: 5px 5px 7px #0000003f;
+  
+    position: relative;
+    z-index: 1;
+    outline: none;
+    cursor: pointer;
+}
+
+.box::before{
+    content: "";
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: all 1s ease ;
+    transform-origin: left;
+    z-index: -1;
+}
+
+.box:hover::before{
+    transform: scaleX(1);
+   
+}
+
